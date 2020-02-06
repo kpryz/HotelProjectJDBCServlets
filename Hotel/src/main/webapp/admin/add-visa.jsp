@@ -53,13 +53,15 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input class="form-control" type="text" onfocus="(this.type='date')" name="startDate"
+                                                <input class="form-control" type="text" onfocus="(this.type='date')"
+                                                       name="startDate"
                                                        placeholder="Start Date *" required="required"
                                                        data-validation-required-message="Please enter start date.">
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                             <div class="form-group">
-                                                <input class="form-control" type="text" onfocus="(this.type='date')" name="endDate"
+                                                <input class="form-control" type="text" onfocus="(this.type='date')"
+                                                       name="endDate"
                                                        placeholder="End Date *" required="required"
                                                        data-validation-required-message="Please enter end date.">
                                                 <p class="help-block text-danger"></p>

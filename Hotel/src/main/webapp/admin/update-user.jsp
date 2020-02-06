@@ -64,7 +64,7 @@
                                             <div class="form-group">
                                                 <input class="form-control search-dropdown" type="email"
                                                        placeholder="New User's Email" list="datalist" name="newEmail"
-                                                      >
+                                                >
                                                 <p class="help-block text-danger"></p>
                                             </div>
                                         </div>

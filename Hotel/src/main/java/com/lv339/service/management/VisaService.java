@@ -7,7 +7,6 @@ import com.lv339.entity.Visa;
 import com.lv339.exceptions.ValidationException;
 import com.lv339.service.MessageForOutput;
 import com.lv339.service.validation.DateValidation;
-import com.lv339.servlets.admin.management.visa.AddVisaServlet;
 import org.apache.log4j.Logger;
 
 import java.util.List;
@@ -23,9 +22,9 @@ public class VisaService {
         Customer customer = customerDAO.getCustomer(ownerEmail);
         try {
             if (!DateValidation.isOk(visa.getStartDate()) ||
-                    !DateValidation.isOk(visa.getEndDate()) ||
-                    !visa.getEndDate().isAfter(visa.getStartDate()) ||
-                    visa.getStartDate().equals(visa.getEndDate())) {
+                !DateValidation.isOk(visa.getEndDate()) ||
+                !visa.getEndDate().isAfter(visa.getStartDate()) ||
+                visa.getStartDate().equals(visa.getEndDate())) {
                 MessageForOutput.setMsg("Dates are incorrect");
                 throw new ValidationException("Dates are incorrect");
             }
@@ -58,7 +57,7 @@ public class VisaService {
         } catch (ValidationException e) {
             logger.error("Dates are incorrect");
             logger.error(e);
-        }catch (RuntimeException e) {
+        } catch (RuntimeException e) {
             logger.error("Problem during inserting visa");
             logger.error(e);
         }
@@ -72,9 +71,9 @@ public class VisaService {
         Customer customer = customerDAO.getCustomer(ownerEmail);
         try {
             if (!DateValidation.isOk(visa.getStartDate()) ||
-                    !DateValidation.isOk(visa.getEndDate()) ||
-                    !visa.getEndDate().isAfter(visa.getStartDate()) ||
-                    visa.getStartDate().equals(visa.getEndDate())) {
+                !DateValidation.isOk(visa.getEndDate()) ||
+                !visa.getEndDate().isAfter(visa.getStartDate()) ||
+                visa.getStartDate().equals(visa.getEndDate())) {
                 MessageForOutput.setMsg("Dates are incorrect");
                 throw new ValidationException("Dates are incorrect");
             }

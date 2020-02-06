@@ -1,5 +1,5 @@
 (function ($) {
-    "use strict"; // Start of use strict
+    'use strict'; // Start of use strict
 
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
@@ -9,7 +9,7 @@
             if (target.length) {
                 $('html, body').animate({
                     scrollTop: (target.offset().top - 54)
-                }, 1000, "easeInOutExpo");
+                }, 1000, 'easeInOutExpo');
                 return false;
             }
         }
@@ -28,10 +28,10 @@
 
     // Collapse Navbar
     var navbarCollapse = function () {
-        if ($("#mainNav").offset().top > 100) {
-            $("#mainNav").addClass("navbar-shrink");
+        if ($('#mainNav').offset().top > 100) {
+            $('#mainNav').addClass('navbar-shrink');
         } else {
-            $("#mainNav").removeClass("navbar-shrink");
+            $('#mainNav').removeClass('navbar-shrink');
         }
     };
     // Collapse now if page is not at top
@@ -41,12 +41,11 @@
 
     // Hide navbar when modals trigger
     $('.portfolio-modal').on('show.bs.modal', function (e) {
-        $(".navbar").addClass("d-none");
+        $('.navbar').addClass('d-none');
     });
     $('.portfolio-modal').on('hidden.bs.modal', function (e) {
-        $(".navbar").removeClass("d-none");
+        $('.navbar').removeClass('d-none');
     });
-
 
     //booking page
     function getParameterByName(name, url) {

@@ -1,4 +1,3 @@
-
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
@@ -44,7 +43,6 @@
 
 <!-- Demo scripts for this page-->
 <script src="../js/demo/datatables-demo.js"></script>
-
 
 
 <!-- <script src="js/demo/chart-area-demo.js"></script>-->

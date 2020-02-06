@@ -77,14 +77,14 @@ public class Hotel {
     @Override
     public String toString() {
         return "Hotel{" +
-                "city='" + city + '\'' +
-                ", country='" + country + '\'' +
-                ", name='" + name + '\'' +
-                ", stars=" + stars +
-                ", street='" + street + '\'' +
-                ", imageUrl='" + imageUrl + '\'' +
-                ", roomList=" + roomList +
-                '}';
+               "city='" + city + '\'' +
+               ", country='" + country + '\'' +
+               ", name='" + name + '\'' +
+               ", stars=" + stars +
+               ", street='" + street + '\'' +
+               ", imageUrl='" + imageUrl + '\'' +
+               ", roomList=" + roomList +
+               '}';
     }
 
     @Override
@@ -93,12 +93,12 @@ public class Hotel {
         if (o == null || getClass() != o.getClass()) return false;
         Hotel hotel = (Hotel) o;
         return stars == hotel.stars &&
-                Objects.equals(city, hotel.city) &&
-                Objects.equals(country, hotel.country) &&
-                Objects.equals(name, hotel.name) &&
-                Objects.equals(street, hotel.street) &&
-                Objects.equals(imageUrl, hotel.imageUrl) &&
-                Objects.equals(roomList, hotel.roomList);
+               Objects.equals(city, hotel.city) &&
+               Objects.equals(country, hotel.country) &&
+               Objects.equals(name, hotel.name) &&
+               Objects.equals(street, hotel.street) &&
+               Objects.equals(imageUrl, hotel.imageUrl) &&
+               Objects.equals(roomList, hotel.roomList);
     }
 
     @Override

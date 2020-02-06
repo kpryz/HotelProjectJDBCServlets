@@ -94,7 +94,7 @@ public class FacilityDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Problem with closing preparedStatement or resultSet " +
-                        "resources in getting facility list method");
+                             "resources in getting facility list method");
                 logger.error(e);
             }
         }
@@ -137,7 +137,7 @@ public class FacilityDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Problem with closing preparedStatement or resultSet" +
-                        " resources in getting facility method");
+                             " resources in getting facility method");
                 logger.error(e);
             }
         }
@@ -172,7 +172,7 @@ public class FacilityDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Problem with closing preparedStatement " +
-                        "resource in updating facility method");
+                             "resource in updating facility method");
                 logger.error(e);
             }
         }
@@ -205,7 +205,7 @@ public class FacilityDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Problem with closing preparedStatement" +
-                        " resource in deleting facility method");
+                             " resource in deleting facility method");
                 logger.error(e);
             }
         }

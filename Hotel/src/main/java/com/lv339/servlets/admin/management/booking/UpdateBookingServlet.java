@@ -26,7 +26,7 @@ public class UpdateBookingServlet extends HttpServlet {
         String hotel = req.getParameter("hotel");
         short roomNumber = Short.parseShort(req.getParameter("roomNumber"));
 
-        bookingService.updateBooking(booking,hotel,roomNumber);
+        bookingService.updateBooking(booking, hotel, roomNumber);
         RequestDispatcher rq = getServletContext().getRequestDispatcher("/admin/update-booking.jsp");
         rq.include(req, resp);
     }

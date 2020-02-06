@@ -7,11 +7,9 @@
  */
 package com.lv339.dao;
 
-import com.lv339.entity.Customer;
 import com.lv339.entity.User;
 import com.lv339.entity.UserRole;
 import org.apache.log4j.Logger;
-
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -61,7 +59,7 @@ public class UserDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Problem with closing preparedStatement or resultSet" +
-                        " resources in getting users method");
+                             " resources in getting users method");
                 logger.error(e);
             }
         }
@@ -107,7 +105,7 @@ public class UserDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Problem with closing preparedStatement or resultSet" +
-                        " resources in getting all users method");
+                             " resources in getting all users method");
                 logger.error(e);
             }
         }
@@ -192,7 +190,7 @@ public class UserDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Problem with closing preparedStatement or resultSet" +
-                        " resources in getting user (email) method");
+                             " resources in getting user (email) method");
                 logger.error(e);
             }
         }

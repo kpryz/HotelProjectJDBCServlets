@@ -18,14 +18,14 @@ public class LogoutService {
             }
         }
 
-        try{
+        try {
             if (session.getAttribute("User") != null) {
                 logger.info("User=" + session.getAttribute("User"));
             } else if (session.getAttribute("Customer") != null) {
                 logger.info("User=" + session.getAttribute("Customer"));
             }
             session.invalidate();
-        }catch (NullPointerException e) {
+        } catch (NullPointerException e) {
             logger.info("Session is not established");
         }
     }

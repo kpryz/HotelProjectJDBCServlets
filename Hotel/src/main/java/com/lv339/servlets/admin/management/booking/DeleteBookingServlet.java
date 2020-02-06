@@ -1,7 +1,6 @@
 package com.lv339.servlets.admin.management.booking;
 
 import com.lv339.service.management.BookingService;
-import com.lv339.service.management.HotelService;
 import com.lv339.servlets.admin.management.hotel.DeleteHotelServlet;
 import org.apache.log4j.Logger;
 

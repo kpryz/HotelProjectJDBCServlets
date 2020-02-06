@@ -1,7 +1,6 @@
 package com.lv339.entity;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Visa {
     private LocalDate startDate;

@@ -93,7 +93,7 @@
                                                         <td>${customer.email}</td>
                                                         <td>
                                                             <input type="radio" name="selectedCustomer"
-                                                                   value="${customer.email}" />
+                                                                   value="${customer.email}"/>
                                                         </td>
                                                     </tr>
                                                 </c:forEach>

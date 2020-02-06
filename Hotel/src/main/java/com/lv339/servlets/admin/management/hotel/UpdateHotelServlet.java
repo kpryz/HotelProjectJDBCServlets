@@ -14,14 +14,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/admin/update-hotel")
-public class UpdateHotelServlet extends HttpServlet{
+public class UpdateHotelServlet extends HttpServlet {
     private static Logger logger = Logger.getLogger(UpdateHotelServlet.class.getName());
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doPut(req, resp);
     }
+
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HotelService hotelService= new HotelService();
+        HotelService hotelService = new HotelService();
         Hotel hotel = new Hotel();
 
         String oldName = req.getParameter("oldName");
@@ -38,7 +39,7 @@ public class UpdateHotelServlet extends HttpServlet{
         hotel.setStars(stars);
         hotel.setStreet(street);
         hotel.setImageUrl(image);
-        hotelService.updateHotel(hotel,oldName);
+        hotelService.updateHotel(hotel, oldName);
         MessageForOutput.setMessageToRequest(req);
 
         RequestDispatcher rq = getServletContext().getRequestDispatcher("/admin/update-hotel.jsp");

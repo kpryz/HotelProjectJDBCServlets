@@ -33,7 +33,8 @@
         </div>
     </li>
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
             <i class="fas fa-fw fa-hotel  mr-1"></i>
             <span>Room Management</span>
         </a>
@@ -44,7 +45,8 @@
         </div>
     </li>
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
             <i class="fas fa-fw  mr-1 fa-user"></i>
             <span>User Management</span>
         </a>
@@ -55,7 +57,8 @@
         </div>
     </li>
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
             <i class="fas fa-fw fa-user  mr-1"></i>
             <span>Customer Management</span>
         </a>
@@ -66,7 +69,8 @@
         </div>
     </li>
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
             <i class="fas fa-fw fa-money-check mr-2"></i>
             <span>Visa Management</span>
         </a>
@@ -77,7 +81,8 @@
         </div>
     </li>
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
             <i class="fas fa-fw  mr-1 fa-user"></i>
             <span>Booking Management</span>
         </a>

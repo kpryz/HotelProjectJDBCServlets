@@ -1,6 +1,5 @@
 package com.lv339.servlets.admin.management.visa;
 
-import com.lv339.dao.VisaDAO;
 import com.lv339.service.MessageForOutput;
 import com.lv339.service.management.VisaService;
 import org.apache.log4j.Logger;

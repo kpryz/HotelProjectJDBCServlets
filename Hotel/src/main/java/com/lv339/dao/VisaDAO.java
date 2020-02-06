@@ -28,7 +28,8 @@ public class VisaDAO {
         PreparedStatement pstmVisas = null;
         ResultSet rsVisas = null;
         try {
-            String sqlSelectVisas = "SELECT country, endDate, startDate, visa_number, customer_email FROM visa WHERE customer_email = ?";
+            String sqlSelectVisas = "SELECT country, endDate, startDate, visa_number, customer_email FROM visa WHERE " +
+                                    "customer_email = ?";
 
             pstmVisas = connection.prepareStatement(sqlSelectVisas);
             pstmVisas.setString(1, customerEmail);
@@ -60,7 +61,7 @@ public class VisaDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Problem with closing preparedStatement or resultSet " +
-                        "resources in getting visa list method");
+                             "resources in getting visa list method");
                 logger.error(e);
             }
         }
@@ -107,7 +108,7 @@ public class VisaDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Problem with closing preparedStatement or resultSet " +
-                        "resources in getting visa method");
+                             "resources in getting visa method");
                 logger.error(e);
             }
         }
@@ -192,7 +193,8 @@ public class VisaDAO {
         Connection connection = DBConnection.getInstance().getConnection();
         PreparedStatement pstm = null;
         try {
-            String sql = "UPDATE visa SET country = ?, startDate = ?, endDate = ?, visa_number = ?, customer_email = ? WHERE visa_number = ?";
+            String sql = "UPDATE visa SET country = ?, startDate = ?, endDate = ?, visa_number = ?, customer_email = ? WHERE " +
+                         "visa_number = ?";
             pstm = connection.prepareStatement(sql);
 
             pstm.setString(1, visa.getCountry());

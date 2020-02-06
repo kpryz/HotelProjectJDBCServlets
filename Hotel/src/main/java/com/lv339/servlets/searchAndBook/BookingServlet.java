@@ -53,9 +53,9 @@ public class BookingServlet extends HttpServlet {
 
         RequestDispatcher rq;
         if (bookingService.insertBooking(booking, roomId)) {
-            req.setAttribute("BookingStatus","success");
+            req.setAttribute("BookingStatus", "success");
         } else {
-            req.setAttribute("BookingStatus","failed");
+            req.setAttribute("BookingStatus", "failed");
         }
         rq = getServletContext().getRequestDispatcher("/booking-success.jsp");
         rq.include(req, resp);

@@ -1,6 +1,5 @@
 package com.lv339.servlets.admin.management.user;
 
-import com.lv339.dao.UserDAO;
 import com.lv339.entity.User;
 import com.lv339.entity.UserRole;
 import com.lv339.service.MessageForOutput;

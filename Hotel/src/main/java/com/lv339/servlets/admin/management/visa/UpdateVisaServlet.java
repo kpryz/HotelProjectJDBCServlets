@@ -1,8 +1,5 @@
 package com.lv339.servlets.admin.management.visa;
 
-import com.lv339.dao.CustomerDAO;
-import com.lv339.dao.VisaDAO;
-import com.lv339.entity.Customer;
 import com.lv339.entity.Visa;
 import com.lv339.service.MessageForOutput;
 import com.lv339.service.management.VisaService;

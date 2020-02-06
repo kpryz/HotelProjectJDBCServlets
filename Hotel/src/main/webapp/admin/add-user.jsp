@@ -33,7 +33,7 @@
                             <div class="col-lg-12">
                                 <form id="contactForm" action="add-user" method="post" novalidate="novalidate">
                                     <div class="row d-flex justify-content-center">
-                                        <div class="col-md-6"> 
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <input class="form-control" type="text" name="firstName"
                                                        placeholder="User's First Name *" required="required"

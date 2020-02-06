@@ -62,7 +62,9 @@ public class BookingDAO {
         PreparedStatement pstm = null;
         ResultSet rs = null;
         try {
-            String sql = "SELECT * FROM hotel_db.booking where room_id =? and ((startDate between ? and ? or endDate between ? and ?)" +
+            String sql =
+                    "SELECT * FROM hotel_db.booking where room_id =? and ((startDate between ? and ? or endDate between ? and " +
+                    "?)" +
                     " or (startDate<=? and endDate>=?));";
 
             pstm = connection.prepareStatement(sql);
@@ -168,11 +170,11 @@ public class BookingDAO {
         ResultSet rs = null;
         try {
             String sql = "SELECT booking.id, endDate, startDate, hotel_name," +
-                    "country, city, street, roomnumber, numberOfpeople, roomType, priceInDollars FROM booking \n" +
-                    "join room on booking.room_id=room.id\n" +
-                    "join hotel on room.hotel_name=hotel.name\n" +
-                    "join customer on booking.customer_email=customer.email " +
-                    "WHERE customer_email = ?;";
+                         "country, city, street, roomnumber, numberOfpeople, roomType, priceInDollars FROM booking \n" +
+                         "join room on booking.room_id=room.id\n" +
+                         "join hotel on room.hotel_name=hotel.name\n" +
+                         "join customer on booking.customer_email=customer.email " +
+                         "WHERE customer_email = ?;";
 
             pstm = connection.prepareStatement(sql);
             pstm.setString(1, customerEmail);
@@ -217,7 +219,7 @@ public class BookingDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Problem with closing preparedStatement or resultSet" +
-                        " resource in getting all bookings method");
+                             " resource in getting all bookings method");
                 logger.error(e);
             }
         }
@@ -233,12 +235,13 @@ public class BookingDAO {
         ResultSet rs = null;
         try {
             String sql = "SELECT booking.id, booking.endDate, booking.startDate, hotel_name, " +
-                    "hotel.country, city, street, roomnumber, numberOfpeople, roomType, priceInDollars, customer_email FROM booking \n" +
-                    "join room on booking.room_id=room.id\n" +
-                    "join hotel on room.hotel_name=hotel.name\n" +
-                    "join customer on booking.customer_email=customer.email " +
-                    "join `user` on customer.user_email=user.email " +
-                    "WHERE user.email = ?;";
+                         "hotel.country, city, street, roomnumber, numberOfpeople, roomType, priceInDollars, customer_email " +
+                         "FROM booking \n" +
+                         "join room on booking.room_id=room.id\n" +
+                         "join hotel on room.hotel_name=hotel.name\n" +
+                         "join customer on booking.customer_email=customer.email " +
+                         "join `USER` on customer.user_email=user.email " +
+                         "WHERE user.email = ?;";
 
             pstm = connection.prepareStatement(sql);
             pstm.setString(1, userEmail);
@@ -283,7 +286,7 @@ public class BookingDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Problem with closing preparedStatement or resultSet" +
-                        " resource in getting all bookings method");
+                             " resource in getting all bookings method");
                 logger.error(e);
             }
         }

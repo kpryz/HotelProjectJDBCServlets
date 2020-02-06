@@ -35,7 +35,7 @@ public class UpdateRoomServlet extends HttpServlet {
         room.setRoomType(roomType);
         room.setHotel_name(hotelName);
 
-        roomService.updateRoom(room,oldRoomNumber);
+        roomService.updateRoom(room, oldRoomNumber);
         MessageForOutput.setMessageToRequest(req);
 
         RequestDispatcher rq = getServletContext().getRequestDispatcher("/admin/update-room.jsp");

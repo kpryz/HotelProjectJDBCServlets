@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/admin/hotels")
-public class AdminGetHotels extends HttpServlet{
+public class AdminGetHotels extends HttpServlet {
     private static Logger logger = Logger.getLogger(AdminGetHotels.class.getName());
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

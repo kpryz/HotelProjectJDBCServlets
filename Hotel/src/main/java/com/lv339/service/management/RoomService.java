@@ -21,19 +21,19 @@ public class RoomService {
         RoomDAO roomDAO = new RoomDAO();
         try {
             Room room1 = roomDAO.getRoomByRoomNumberAndHotelName(room.getRoomNumber(), room.getHotel_name());
-            if (room1!=null){
+            if (room1 != null) {
                 logger.info("There is already such room in the database");
 
                 MessageForOutput.setMsg("Such room is already registered.");
                 MessageForOutput.setMsgTypeError();
-            } else{
+            } else {
                 boolean isSuccess = false;
-                if (isSuccess =  roomDAO.insertRoom(room)) {
+                if (isSuccess = roomDAO.insertRoom(room)) {
                     logger.info("Room " + room.getRoomNumber() + " is inserted successfully");
 
                     MessageForOutput.setMsg("Customer is added successfully");
                     MessageForOutput.setMsgTypeInfo();
-                }else {
+                } else {
                     logger.info("Room is not inserted.");
 
                     MessageForOutput.setMsg("Room is not added, please, check input data.");
@@ -53,8 +53,8 @@ public class RoomService {
     public void updateRoom(Room room, short oldRoomNumber) {
         RoomDAO roomDAO = new RoomDAO();
         HotelDAO hotelDAO = new HotelDAO();
-        try{
-            if (hotelDAO.getHotel(room.getHotel_name())!=null) {
+        try {
+            if (hotelDAO.getHotel(room.getHotel_name()) != null) {
                 Room oldRoom = roomDAO.getRoomByRoomNumberAndHotelName(oldRoomNumber, room.getHotel_name());
                 room.setId(oldRoom.getId());
                 boolean isSuccess = false;
@@ -74,12 +74,12 @@ public class RoomService {
 
                     MessageForOutput.setMsgTypeError();
                 }
-            }else {
+            } else {
                 logger.info("Problem with updating room. There is no such hotel. ");
                 MessageForOutput.setMsg("There is no such hotel. Please try again");
                 MessageForOutput.setMsgTypeError();
             }
-        }catch (RuntimeException e) {
+        } catch (RuntimeException e) {
             logger.error("Problem during inserting room");
             logger.error(e);
         }
@@ -91,7 +91,7 @@ public class RoomService {
         RoomDAO roomDAO = new RoomDAO();
         HotelDAO hotelDAO = new HotelDAO();
         try {
-            if (hotelDAO.getHotel(hotelName)!=null) {
+            if (hotelDAO.getHotel(hotelName) != null) {
                 boolean isSuccess = false;
                 Room room = roomDAO.getRoomByRoomNumberAndHotelName(roomNumber, hotelName);
                 if (isSuccess = roomDAO.deleteRoomById(room.getId())) {

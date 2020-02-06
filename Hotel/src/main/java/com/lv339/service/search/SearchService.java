@@ -24,9 +24,9 @@ public class SearchService {
 
         try {
             if (!DateValidation.isOk(searchParam.getStartDate()) ||
-                    !DateValidation.isOk(searchParam.getEndDate()) ||
-                    !searchParam.getEndDate().isAfter(searchParam.getStartDate()) ||
-                    searchParam.getStartDate().equals(searchParam.getEndDate())) {
+                !DateValidation.isOk(searchParam.getEndDate()) ||
+                !searchParam.getEndDate().isAfter(searchParam.getStartDate()) ||
+                searchParam.getStartDate().equals(searchParam.getEndDate())) {
                 MessageForOutput.setMsg("Dates are incorrect");
                 throw new ValidationException("Dates are incorrect");
             }
@@ -39,17 +39,17 @@ public class SearchService {
                 logger.info("Search by country");
 
                 roomList = roomDAO.getFreeRoomsByCountry(searchParam.getQuery(), searchParam.getNumberOfPeople(),
-                        searchParam.getStartDate(), searchParam.getEndDate());
+                                                         searchParam.getStartDate(), searchParam.getEndDate());
             } else if (hotelDAO.getAllCities().contains(searchParam.getQuery())) {
                 logger.info("Search by city");
 
                 roomList = roomDAO.getFreeRoomsByCity(searchParam.getQuery(), searchParam.getNumberOfPeople(),
-                        searchParam.getStartDate(), searchParam.getEndDate());
+                                                      searchParam.getStartDate(), searchParam.getEndDate());
             } else if (hotelDAO.getAllHotelNames().contains(searchParam.getQuery())) {
                 logger.info("Search by hotel name");
 
                 roomList = roomDAO.getFreeRoomsByHotelName(searchParam.getQuery(), searchParam.getNumberOfPeople(),
-                        searchParam.getStartDate(), searchParam.getEndDate());
+                                                           searchParam.getStartDate(), searchParam.getEndDate());
             } else {
                 logger.info("No search results");
 

@@ -59,11 +59,12 @@ public class RoomDAO {
      * @param room
      */
     public boolean insertRoom(Room room) {
-        boolean isSuccess=false;
+        boolean isSuccess = false;
         Connection connection = DBConnection.getInstance().getConnection();
         PreparedStatement pstm = null;
         try {
-            String sql = "INSERT into room(roomnumber, hotel_name, priceInDollars, roomType, numberOfPeople ) VALUES (?, ?, ?, ?, ?)";
+            String sql = "INSERT into room(roomnumber, hotel_name, priceInDollars, roomType, numberOfPeople ) VALUES (?, ?, ?, " +
+                         "?, ?)";
             pstm = connection.prepareStatement(sql);
 
             pstm.setShort(1, room.getRoomNumber());
@@ -97,7 +98,8 @@ public class RoomDAO {
         Connection connection = DBConnection.getInstance().getConnection();
         PreparedStatement pstm = null;
         try {
-            String sql = "UPDATE room SET roomnumber = ? , hotel_name= ?, priceInDollars = ?, roomType = ?, numberOfpeople = ? WHERE  id =?;";
+            String sql = "UPDATE room SET roomnumber = ? , hotel_name= ?, priceInDollars = ?, roomType = ?, numberOfpeople = ? " +
+                         "WHERE  id =?;";
             pstm = connection.prepareStatement(sql);
 
             pstm.setShort(1, room.getRoomNumber());
@@ -129,7 +131,7 @@ public class RoomDAO {
      * @return Hotel
      */
     public boolean deleteRoomById(int roomId) {
-        boolean  isSuccess = false;
+        boolean isSuccess = false;
         Connection connection = DBConnection.getInstance().getConnection();
         PreparedStatement pstm = null;
         try {
@@ -166,7 +168,8 @@ public class RoomDAO {
 
         List<Room> list = new ArrayList<>();
         try {
-            String sql = "SELECT a.id, a.roomnumber, a.priceInDollars, a.roomType, a.numberOfPeople,a.hotel_name from room a where a.roomType = ?";
+            String sql = "SELECT a.id, a.roomnumber, a.priceInDollars, a.roomType, a.numberOfPeople,a.hotel_name from room a " +
+                         "where a.roomType = ?";
             pstm = connection.prepareStatement(sql);
             pstm.setString(1, roomType);
             ResultSet rs = pstm.executeQuery();
@@ -210,7 +213,7 @@ public class RoomDAO {
         PreparedStatement pstm = null;
         try {
             String sql = "SELECT a.id, a.roomnumber, a.priceInDollars, a.roomType, a.numberOfPeople,a.hotel_name from room a \n" +
-                    "where a.roomnumber=? and a.hotel_name=?  ;";
+                         "where a.roomnumber=? and a.hotel_name=?  ;";
             pstm = connection.prepareStatement(sql);
             pstm.setShort(1, roomNumber);
             pstm.setString(2, hotelName);
@@ -259,7 +262,8 @@ public class RoomDAO {
         List<Room> list = new ArrayList<>();
         try {
             String sql = "SELECT a.id, a.roomnumber, a.priceInDollars, a.roomType, a.numberOfPeople,a.hotel_name from room a " +
-                    "JOIN hotel ON a.hotel_name = hotel.name WHERE hotel.city=? and numberOfpeople <= ? GROUP BY a.priceInDollars;";
+                         "JOIN hotel ON a.hotel_name = hotel.name WHERE hotel.city=? and numberOfpeople <= ? GROUP BY a" +
+                         ".priceInDollars;";
             pstm = connection.prepareStatement(sql);
             pstm.setString(1, city);
             pstm.setByte(2, numberOfPeople);
@@ -310,7 +314,8 @@ public class RoomDAO {
         BookingDAO bookingDAO = new BookingDAO();
         List<Room> list = new ArrayList<>();
         try {
-            String sql = "SELECT * FROM room r INNER JOIN hotel h ON r.hotel_name = h.`name` WHERE h.country = ? and numberOfpeople <= ?;";
+            String sql = "SELECT * FROM room r INNER JOIN hotel h ON r.hotel_name = h.`name` WHERE h.country = ? and " +
+                         "numberOfpeople <= ?;";
             pstm = connection.prepareStatement(sql);
             pstm.setString(1, country);
             pstm.setByte(2, numberOfPeople);
@@ -364,7 +369,8 @@ public class RoomDAO {
         List<Room> list = new ArrayList<>();
         try {
             String sql = "SELECT a.id, a.roomnumber, a.priceInDollars, a.roomType, a.numberOfPeople,a.hotel_name from room a " +
-                    "JOIN hotel ON a.hotel_name = hotel.name WHERE hotel.name=? and numberOfpeople <= ? GROUP BY a.hotel_name;";
+                         "JOIN hotel ON a.hotel_name = hotel.name WHERE hotel.name=? and numberOfpeople <= ? GROUP BY a" +
+                         ".hotel_name;";
             pstm = connection.prepareStatement(sql);
             pstm.setString(1, hotel_name);
             pstm.setByte(2, numberOfPeople);

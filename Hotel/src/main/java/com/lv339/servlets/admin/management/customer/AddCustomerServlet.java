@@ -1,12 +1,8 @@
 package com.lv339.servlets.admin.management.customer;
 
-import com.lv339.dao.CustomerDAO;
-import com.lv339.dao.UserDAO;
 import com.lv339.entity.Customer;
-import com.lv339.entity.User;
 import com.lv339.service.MessageForOutput;
 import com.lv339.service.management.CustomerService;
-import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

@@ -40,7 +40,6 @@
     </div>
 
 
-
     <!-- Navbar -->
     <ul class="navbar-nav ml-auto ml-md-0">
         <li class="nav-item dropdown no-arrow mx-1">

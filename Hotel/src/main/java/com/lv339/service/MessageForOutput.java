@@ -6,10 +6,10 @@ public class MessageForOutput {
     private static MessageType msgType;
     private static String msg;
 
-    public static void setMessageToRequest(HttpServletRequest request){
-        if(msgType == MessageType.MSG_ERROR){
-            request.setAttribute("Error",msg);
-        }else{
+    public static void setMessageToRequest(HttpServletRequest request) {
+        if (msgType == MessageType.MSG_ERROR) {
+            request.setAttribute("Error", msg);
+        } else {
             request.setAttribute("Msg", msg);
         }
     }

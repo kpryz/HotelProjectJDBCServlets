@@ -14,7 +14,8 @@ public class User implements IUser {
     public User() {
     }
 
-    public User(String firstName, String lastName, String email, String password, UserRole userRole, List<Customer> customerList) {
+    public User(String firstName, String lastName, String email, String password, UserRole userRole,
+                List<Customer> customerList) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -71,10 +72,11 @@ public class User implements IUser {
         this.customerList = customerList;
     }
 
-    public boolean isAdmin(){
+    public boolean isAdmin() {
         return userRole == UserRole.ROLE_ADMIN;
     }
-    public boolean isJustUser(){
+
+    public boolean isJustUser() {
         return userRole == UserRole.ROLE_USER;
     }
 }

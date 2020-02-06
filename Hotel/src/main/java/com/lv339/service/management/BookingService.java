@@ -55,8 +55,8 @@ public class BookingService {
         Room room;
         try {
             if (DateValidation.isOk(booking.getStartDate()) &&
-                    !DateValidation.isOk(booking.getEndDate()) &&
-                    !booking.getEndDate().isAfter(booking.getStartDate())) {
+                !DateValidation.isOk(booking.getEndDate()) &&
+                !booking.getEndDate().isAfter(booking.getStartDate())) {
                 MessageForOutput.setMsg("Dates are incorrect");
                 throw new ValidationException("Dates are incorrect");
             }
@@ -77,9 +77,9 @@ public class BookingService {
         RoomDAO roomDAO = new RoomDAO();
         try {
             if (!DateValidation.isOk(booking.getStartDate()) ||
-                    !DateValidation.isOk(booking.getEndDate()) ||
-                    !booking.getEndDate().isAfter(booking.getStartDate()) ||
-                    booking.getStartDate().equals(booking.getEndDate())) {
+                !DateValidation.isOk(booking.getEndDate()) ||
+                !booking.getEndDate().isAfter(booking.getStartDate()) ||
+                booking.getStartDate().equals(booking.getEndDate())) {
                 MessageForOutput.setMsg("Dates are incorrect");
                 throw new ValidationException("Dates are incorrect");
             }
@@ -107,9 +107,9 @@ public class BookingService {
         RoomDAO roomDAO = new RoomDAO();
         try {
             if (!DateValidation.isOk(booking.getStartDate()) ||
-                    !DateValidation.isOk(booking.getEndDate()) ||
-                    !booking.getEndDate().isAfter(booking.getStartDate()) ||
-                    booking.getStartDate().equals(booking.getEndDate())) {
+                !DateValidation.isOk(booking.getEndDate()) ||
+                !booking.getEndDate().isAfter(booking.getStartDate()) ||
+                booking.getStartDate().equals(booking.getEndDate())) {
                 MessageForOutput.setMsg("Dates are incorrect");
                 throw new ValidationException("Dates are incorrect");
             }
@@ -126,7 +126,7 @@ public class BookingService {
     }
 
     public int getTotalPrice(int pricePerDay, LocalDate start, LocalDate end) {
-        int diff = (int) DAYS.between(start,end );
+        int diff = (int) DAYS.between(start, end);
         return pricePerDay * diff;
     }
 

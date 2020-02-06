@@ -33,7 +33,8 @@ public class CustomerDAO {
         PreparedStatement pstm = null;
         try {
             String sql =
-                    "INSERT INTO customer(firstName, lastName, contactNumber, email, user_email, password) VALUES (?, ?, ?, ?, ?, ?)";
+                    "INSERT INTO customer(firstName, lastName, contactNumber, email, user_email, password) VALUES (?, ?, ?, ?, " +
+                    "?, ?)";
             pstm = connection.prepareStatement(sql);
 
             pstm.setString(1, customer.getFirstName());
@@ -103,7 +104,7 @@ public class CustomerDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Problem with closing preparedStatement or resultSet" +
-                        " resource in getting customer(id) method");
+                             " resource in getting customer(id) method");
                 logger.error(e);
             }
         }
@@ -152,7 +153,7 @@ public class CustomerDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Problem with closing preparedStatement or resultSet" +
-                        " resources in getting customer(email) method");
+                             " resources in getting customer(email) method");
                 logger.error(e);
             }
         }
@@ -204,7 +205,7 @@ public class CustomerDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Problem with closing preparedStatement or resultSet" +
-                        " resources in getting customer list method");
+                             " resources in getting customer list method");
                 logger.error(e);
             }
         }
@@ -222,7 +223,8 @@ public class CustomerDAO {
         Connection connection = DBConnection.getInstance().getConnection();
         PreparedStatement pstm = null;
         try {
-            String sql = "UPDATE customer SET firstName = ?, lastName = ?, contactNumber = ?, email = ?, password = ? WHERE email = ?";
+            String sql = "UPDATE customer SET firstName = ?, lastName = ?, contactNumber = ?, email = ?, password = ? WHERE " +
+                         "email = ?";
             pstm = connection.prepareStatement(sql);
 
             pstm.setString(1, customer.getFirstName());
@@ -276,7 +278,7 @@ public class CustomerDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Problem with closing preparedStatement " +
-                        "resource in deleting customer method");
+                             "resource in deleting customer method");
                 logger.error(e);
             }
         }
@@ -311,7 +313,7 @@ public class CustomerDAO {
                 }
             } catch (SQLException e) {
                 logger.error("Problem with closing preparedStatement " +
-                        "resource in deleting customer (customerEmail, userEmail) method");
+                             "resource in deleting customer (customerEmail, userEmail) method");
                 logger.error(e);
             }
         }

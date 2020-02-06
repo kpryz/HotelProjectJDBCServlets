@@ -68,7 +68,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input class="form-control"  type="text" name="imageUrl"
+                                                <input class="form-control" type="text" name="imageUrl"
                                                        placeholder="Hotel imageUrl url">
                                                 <p class="help-block text-danger"></p>
                                             </div>

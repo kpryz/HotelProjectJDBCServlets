@@ -1,22 +1,22 @@
 (function ($) {
-    "use strict"; // Start of use strict
+    'use strict'; // Start of use strict
 
     //form validation
-    var inputs = $("input,textarea,select");
-    inputs.not("[type=submit]").jqBootstrapValidation({
+    var inputs = $('input,textarea,select');
+    inputs.not('[type=submit]').jqBootstrapValidation({
         preventSubmit: true,
-        submitError: function($form, event, errors) {
+        submitError: function ($form, event, errors) {
             // additional error messages or events
         },
-        submitSuccess: function($form, event) {
+        submitSuccess: function ($form, event) {
         }
     });
 
     // Toggle the side navigation
-    $("#sidebarToggle").click(function (e) {
+    $('#sidebarToggle').click(function (e) {
         e.preventDefault();
-        $("body").toggleClass("sidebar-toggled");
-        $(".sidebar").toggleClass("toggled");
+        $('body').toggleClass('sidebar-toggled');
+        $('.sidebar').toggleClass('toggled');
     });
 
     // Prevent the content wrapper from scrolling when the fixed side navigation hovered over

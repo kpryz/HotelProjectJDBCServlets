@@ -18,7 +18,7 @@ public class DeleteHotelServlet extends HttpServlet {
     private static Logger logger = Logger.getLogger(DeleteHotelServlet.class.getName());
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HotelService hotelService=new HotelService();
+        HotelService hotelService = new HotelService();
         String name = req.getParameter("name");
         hotelService.deleteHotel(name);
         MessageForOutput.setMessageToRequest(req);

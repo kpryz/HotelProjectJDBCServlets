@@ -1,9 +1,5 @@
 package com.lv339.servlets.admin.management.room;
 
-import com.lv339.dao.HotelDAO;
-import com.lv339.dao.RoomDAO;
-import com.lv339.entity.Hotel;
-import com.lv339.entity.Room;
 import com.lv339.service.MessageForOutput;
 import com.lv339.service.management.RoomService;
 
@@ -21,7 +17,7 @@ public class DeleteRoomServlet extends HttpServlet {
         RoomService roomService = new RoomService();
         String hotelName = req.getParameter("hotelName");
         short roomNumber = Short.parseShort(req.getParameter("roomNumber"));
-        roomService.deleteRoom(roomNumber,hotelName);
+        roomService.deleteRoom(roomNumber, hotelName);
 
         MessageForOutput.setMessageToRequest(req);
 

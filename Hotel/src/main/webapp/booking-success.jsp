@@ -38,9 +38,10 @@
 <a class="btn btn-success btn-md  text-uppercase o-0" id="linkToShowModal" data-toggle="modal"
    href="#bookingModal">book</a>
 
-<div class="portfolio-modal d-flex justify-content-center align-items-center modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="portfolio-modal d-flex justify-content-center align-items-center modal fade" id="bookingModal" tabindex="-1"
+     role="dialog" aria-hidden="true">
     <div class="modal-dialog d-flex mw-25">
-        <div class="modal-content d-flex align-items-center bg-light pl-5 pr-5" >
+        <div class="modal-content d-flex align-items-center bg-light pl-5 pr-5">
             <div class="close close-modal" data-dismiss="modal">
                 <div class="lr">
                     <div class="rl"></div>

@@ -36,7 +36,7 @@ public class LoginService {
             } else {
                 logger.info("There is no such user nor customer in db.");
                 MessageForOutput.setMsg("There us no such user nor customer, please, " +
-                        "check your input data or contact us for registration");
+                                        "check your input data or contact us for registration");
             }
 
             MessageForOutput.setMsgTypeError();

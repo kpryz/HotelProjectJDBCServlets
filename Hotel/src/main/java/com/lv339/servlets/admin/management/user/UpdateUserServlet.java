@@ -1,11 +1,9 @@
 package com.lv339.servlets.admin.management.user;
 
-import com.lv339.dao.UserDAO;
 import com.lv339.entity.User;
 import com.lv339.entity.UserRole;
 import com.lv339.service.MessageForOutput;
 import com.lv339.service.management.UserService;
-import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

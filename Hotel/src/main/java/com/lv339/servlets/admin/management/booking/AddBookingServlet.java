@@ -1,9 +1,7 @@
 package com.lv339.servlets.admin.management.booking;
 
 import com.lv339.entity.Booking;
-import com.lv339.entity.Hotel;
 import com.lv339.service.management.BookingService;
-import com.lv339.service.management.HotelService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,7 +25,7 @@ public class AddBookingServlet extends HttpServlet {
         String hotel = req.getParameter("hotel");
         short roomNumber = Short.parseShort(req.getParameter("roomNumber"));
 
-        bookingService.insertBooking(booking,hotel,roomNumber);
+        bookingService.insertBooking(booking, hotel, roomNumber);
         RequestDispatcher rq = getServletContext().getRequestDispatcher("/admin/add-booking.jsp");
         rq.include(req, resp);
     }
