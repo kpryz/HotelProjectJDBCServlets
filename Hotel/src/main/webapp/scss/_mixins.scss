@@ -1,0 +1,71 @@
+// Mixins
+// Background Cover Mixin
+@mixin background-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+// Font Mixins
+@mixin serif-font {
+  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@mixin script-font {
+  font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
+}
+
+@mixin body-font {
+  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@mixin heading-font {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.transition-hover {
+  transition: ease-in-out all 0.2s;
+
+}
+
+.header-100vh {
+  @media (min-width: 1400px) {
+    height: 100vh;
+  }
+}
+
+.abs-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.opacity-on-hover {
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.o-0{
+  opacity: 0;
+}
+
+.h-90vh{
+  height: 90vh;
+}
+
+.mw-25{
+  min-width: 25%;
+}
+
+.h-95vh{
+  min-height: 95vh;
+}
+
+.make-container-wider{
+  .container{
+    max-width: 1400px !important;
+  }
+}

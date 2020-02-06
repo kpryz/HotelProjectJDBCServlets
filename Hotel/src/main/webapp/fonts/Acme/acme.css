@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'acme', sans-serif;
+    src: url('Acme-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+    font-weight: 400;
+}

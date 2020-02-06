@@ -1,0 +1,80 @@
+.add-user-section {
+  background-image: url(../../img/admin-bgs/userAdd.jpg);
+}
+
+.delete-user-section {
+  background-image: url(../../img/admin-bgs/userDelete.jpg);
+
+}
+
+.update-user-section {
+  background-image: url(../../img/admin-bgs/userUpdate.jpg);
+}
+
+.add-customer-section {
+  background-image: url(../../img/admin-bgs/addCustomer.jpg);
+}
+
+.delete-customer-section {
+  background-image: url(../../img/admin-bgs/deleteCustomer.jpg);
+}
+
+.update-customer-section {
+  background-image: url(../../img/admin-bgs/updateCustomer.jpg);
+}
+
+.add-visa-section {
+  background-image: url(../../img/admin-bgs/addVisa.jpg);
+}
+
+.delete-visa-section {
+  background-image: url(../../img/admin-bgs/deleteVisa.jpg);
+}
+
+.update-visa-section {
+  background-image: url(../../img/admin-bgs/updateVisa.jpg);
+}
+
+.add-hotel-section {
+  background-image: url(../../img/admin-bgs/addHotel.jpg);
+}
+
+.delete-hotel-section {
+  background-image: url(../../img/admin-bgs/deleteHotel.jpg);
+}
+
+.update-hotel-section {
+  background-image: url(../../img/admin-bgs/updateHotel.jpg);
+}
+
+.add-room-section {
+  background-image: url(../../img/admin-bgs/addRoom.jpg);
+}
+
+.update-room-section {
+  background-image: url(../../img/admin-bgs/updateRoom.jpg);
+}
+
+.delete-room-section {
+  background-image: url(../../img/admin-bgs/deleteRoom.jpg);
+}
+
+.admin-crud-section {
+  input {
+    max-height: 66px;
+  }
+}
+
+input[type=date]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  display: none;
+}
+
+.admin-crud-section {
+  input, select, textarea {
+    opacity: 0.85;
+  }
+  @media(min-width: 1200px) {
+    min-height: 73vh;
+  }
+}
